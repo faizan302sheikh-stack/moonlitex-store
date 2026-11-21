@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MOONLITEX | Premium Fashion</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f4f0e8;color:#201e19;font-family:Arial,sans-serif}
+header{padding:22px 6%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ddd4c6}
+.logo{font: bold 24px Georgia;letter-spacing:5px}
+a{color:inherit;text-decoration:none;margin-left:16px;font-size:12px}
+.hero{padding:85px 8%;background:#e7dfd1}
+small{letter-spacing:3px;color:#82745f}
+h1{font:normal 65px Georgia;margin:22px 0}
+p{line-height:1.8;color:#71695e}
+.btn{display:inline-block;background:#211f1a;color:white;padding:15px 25px;margin-top:15px}
+section{padding:65px 7%}
+h2{font:normal 38px Georgia}
+.filters button,.add{padding:12px 18px;border:1px solid #29251f;background:transparent;margin:5px;cursor:pointer}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.product{background:#e9e2d7;padding-bottom:16px}
+.art{height:220px;display:grid;place-items:center;color:white;font:italic 30px Georgia;background:linear-gradient(140deg,#b7a58e,#51483c)}
+.product h3,.product p{margin:12px}
+.add{margin:0 12px}
+.story{background:#211f1a;color:#f4f0e8}
+.story p{color:#c9c0b2}
+footer{padding:30px;background:#e7dfd1;text-align:center;font-size:12px}
+.notice{font-size:12px;padding:18px 7%;background:#eee8dd}
+@media(max-width:650px){h1{font-size:48px}.grid{grid-template-columns:repeat(2,1fr)}.art{height:160px}.logo{font-size:18px;letter-spacing:3px}a{margin-left:8px;font-size:10px}}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">MOONLITEX</div>
+<nav><a href="#shop">SHOP</a><a href="#story">ABOUT</a></nav>
+</header>
+<div class="hero">
+<small>PREMIUM EVERYDAY FASHION</small>
+<h1>Quiet style.<br>Bold presence.</h1>
+<p>Modern fashion essentials for Men & Women. Discover the MOONLITEX collection.</p>
+<a class="btn" href="#shop">EXPLORE COLLECTION</a>
+</div>
+<section id="shop">
+<small>THE COLLECTION</small>
+<h2>Shop the edit</h2>
+<div class="filters">
+<button onclick="filter('all')">ALL</button>
+<button onclick="filter('men')">MEN</button>
+<button onclick="filter('women')">WOMEN</button>
+</div>
+<div class="grid">
+<div class="product" data-type="men"><div class="art">FORM 01</div><h3>Essential Overshirt</h3><p>₹1,499 · Sample price</p><button class="add" onclick="alert('Demo only. Orders are not active yet.')">VIEW ITEM</button></div>
+<div class="product" data-type="women"><div class="art">FORM 02</div><h3>Everyday Co-ord</h3><p>₹1,899 · Sample price</p><button class="add" onclick="alert('Demo only. Orders are not active yet.')">VIEW ITEM</button></div>
+<div class="product" data-type="men"><div class="art">FORM 03</div><h3>Classic Tee</h3><p>₹799 · Sample price</p><button class="add" onclick="alert('Demo only. Orders are not active yet.')">VIEW ITEM</button></div>
+<div class="product" data-type="women"><div class="art">FORM 04</div><h3>Relaxed Shirt</h3><p>₹1,299 · Sample price</p><button class="add" onclick="alert('Demo only. Orders are not active yet.')">VIEW ITEM</button></div>
+<div class="product" data-type="men"><div class="art">FORM 05</div><h3>Daily Layer</h3><p>₹1,099 · Sample price</p><button class="add" onclick="alert('Demo only. Orders are not active yet.')">VIEW ITEM</button></div>
+<div class="product" data-type="women"><div class="art">FORM 06</div><h3>Minimal Top</h3><p>₹999 · Sample price</p><button class="add" onclick="alert('Demo only. Orders are not active yet.')">VIEW ITEM</button></div>
+</div>
+<p>All products and prices shown are illustrative demo items.</p>
+</section>
+<section class="story" id="story">
+<small>OUR STORY</small>
+<h2>Made for your own rhythm.</h2>
+<p>MOONLITEX is a modern fashion brand concept built around clean silhouettes, considered details and timeless everyday style.</p>
+</section>
+<section>
+<h2>Store Policies</h2>
+<p><b>Orders & Payments:</b> Ordering and payments are not active in this preview.</p>
+<p><b>Shipping:</b> Delivery details will be published before the store launches.</p>
+<p><b>Returns:</b> Return and refund terms will be published before sales begin.</p>
+<p><b>Privacy:</b> This preview does not collect customer information.</p>
+<p><b>Contact:</b> Official contact details will be added before launch.</p>
+<p><b>Business details:</b> Verified business and applicable tax details will be added when confirmed.</p>
+</section>
+<div class="notice">DEMO WEBSITE ONLY. No real products are currently for sale. No orders, payments or customer information are collected. Sample prices are not actual offers.</div>
+<footer>© 2026 MOONLITEX · MEN & WOMEN</footer>
+<script>
+function filter(type){
+document.querySelectorAll('.product').forEach(p=>{
+p.style.display=type==='all'||p.dataset.type===type?'':'none';
+});
+}
+</script>
+</body>
+</html>
